@@ -2,30 +2,24 @@
     agent any
 
     stages {
-        stage ('Compile Stage') {
+        stage ('build') {
 
             steps {
-                withMaven(maven : 'maven_3_6_3') {
-                    sh 'mvn clean compile'
-                }
+                echo 'building the app'
             }
         }
 
         stage ('Testing Stage') {
 
             steps {
-                withMaven(maven : 'maven_3_6_3') {
-                    sh 'mvn test'
-                }
+              echo 'testing the app'
             }
         }
 
 
         stage ('Deployment Stage') {
             steps {
-                withMaven(maven : 'maven_3_6_3') {
-                    sh 'mvn deploy'
-                }
+              echo 'deploying the app'
             }
         }
     }

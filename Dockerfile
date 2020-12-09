@@ -10,4 +10,4 @@ RUN pip install -r requirements.txt
 COPY /app .
 
 # Run the application
-CMD ["python", "index.py"]
+CMD ["python", "helloworld.py"]
